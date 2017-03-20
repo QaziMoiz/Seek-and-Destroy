@@ -1,0 +1,24 @@
+function getRidOfFlasy(val){
+    return Boolean(val);
+}
+
+function destroyer(arr) {
+  // Remove all the values
+  var argsArray = Array.prototype.slice.call(arguments);
+  argsArray.splice(0,1);
+  //return arr;
+  
+  for(var i = 0; i < arr.length; i++){
+    for(var j = 0; j < argsArray.length; j++){
+      if(arr[i] == argsArray[j]){
+        delete arr[i];
+        
+      }
+    }
+  }var result = arr.filter(getRidOfFlasy);
+  return (result);
+}
+
+destroyer(["tree", "hamburger", 53], "tree", 53);
+
+
